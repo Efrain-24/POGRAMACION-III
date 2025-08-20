@@ -27,12 +27,11 @@ public class Calculadora {
         return resultado;
     }
 
-
     public double dividir(int a, int b) {
         if (b == 0) {
             throw new ArithmeticException("No se puede dividir entre cero");
         }
-        double resultado = (double) a * b; // fallo aquí
+        double resultado = (double) a / b; // ✅ corregido
         historial.add(resultado);
         return resultado;
     }
