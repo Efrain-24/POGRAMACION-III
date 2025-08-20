@@ -1,3 +1,5 @@
+package com.mycompany.examen;
+
 import java.util.ArrayList;
 import java.util.List;
 
