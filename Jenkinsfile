@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3' // Aquí va el nombre exacto de la instalación de Maven en Jenkins
+    }
+
     stages {
         stage('Clonar repositorio') {
             steps {
