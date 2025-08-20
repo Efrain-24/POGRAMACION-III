@@ -35,20 +35,6 @@
                 <configuration>
                     <useModulePath>false</useModulePath>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-                    <properties>
-                        <property>
-                            <name>junit.platform.output.capture.stdout</name>
-                            <value>true</value>
-                        </property>
-                        <property>
-                            <name>junit.platform.output.capture.stderr</name>
-                            <value>true</value>
-                        </property>
-                        <property>
-                            <name>junit.platform.reporting.openxml.enabled</name>
-                            <value>true</value>
-                        </property>
-                    </properties>
                 </configuration>
             </plugin>
         </plugins>
