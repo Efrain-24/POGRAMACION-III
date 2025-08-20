@@ -8,6 +8,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -18,6 +19,7 @@
 
     <build>
         <plugins>
+            <!-- Surefire plugin con configuración para reportes XML -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -25,6 +27,20 @@
                 <configuration>
                     <useModulePath>false</useModulePath>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <properties>
+                        <property>
+                            <name>junit.platform.output.capture.stdout</name>
+                            <value>true</value>
+                        </property>
+                        <property>
+                            <name>junit.platform.output.capture.stderr</name>
+                            <value>true</value>
+                        </property>
+                        <property>
+                            <name>junit.platform.reporting.openxml.enabled</name>
+                            <value>true</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
         </plugins>
