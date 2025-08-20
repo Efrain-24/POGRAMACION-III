@@ -23,11 +23,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <useModulePath>false</useModulePath>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-                    <useFile>true</useFile>
-                    <reportFormat>brief</reportFormat>
-                    <systemOut>true</systemOut>
-                    <systemErr>true</systemErr>
                 </configuration>
             </plugin>
         </plugins>
