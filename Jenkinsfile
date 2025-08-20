@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3' // Aquí va el nombre exacto de la instalación de Maven en Jenkins
+        maven 'Maven3' // Nombre exacto de la instalación de Maven en Jenkins
     }
 
     stages {
@@ -36,6 +36,15 @@ pipeline {
             }
             post {
                 always {
+                    // Imprime el contenido de la carpeta de reportes para depuración
+                    script {
+                        if (isUnix()) {
+                            sh 'ls -R target/surefire-reports'
+                        } else {
+                            bat 'dir target\\surefire-reports'
+                        }
+                    }
+                    // Publica los resultados de JUnit
                     junit '**/target/surefire-reports/*.xml'
                 }
             }
