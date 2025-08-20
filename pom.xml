@@ -15,6 +15,14 @@
             <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- JUnit 4 para compatibilidad con reportes XML en Jenkins -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
